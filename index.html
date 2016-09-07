@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>WTM MAP - Beta</title><!-- NormalizeCSS -->
-    <link href="https://necolas.github.io/normalize.css/latest/normalize.css"
-    rel="stylesheet"><!-- Bootstrap -->
+    <title>WTM MAP - Beta</title>
+    <!-- NormalizeCSS -->
+    <link href="https://necolas.github.io/normalize.css/latest/normalize.css" rel="stylesheet">
+    <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,17 +21,17 @@
     <script src="/horizon/horizon.js"></script>
     <script src="https://use.fontawesome.com/147d1a75aa.js">
     </script>
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js">
     </script>
     <script>
-      WebFont.load({
-        google: {
-          families: ['Lato']
-        }
-      });
+        WebFont.load({
+            google: {
+                families: ['Lato']
+            }
+        });
     </script>
 </head>
+
 <body>
     <div class="container">
         <div class="col-sm-6">
@@ -38,9 +40,7 @@
                 <h2>Live Tracking</h2>
                 <h2>Participant</h2>
                 <div class="svg-container">
-                    <svg class="svg-content" preserveaspectratio=
-                    "xMinYMin meet" version="1.1" viewbox="0 0 1008 651" xmlns=
-                    "http://www.w3.org/2000/svg">
+                    <svg class="svg-content" preserveaspectratio="xMinYMin meet" version="1.1" viewbox="0 0 1008 651" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd" id="Page-1" stroke=
                     "none" stroke-width="1">
                         <path d=
@@ -65,12 +65,11 @@
         </div>
         <div class="col-sm-6">
             <div class="infoBox">
-              <h1>TEST</h1>
+                <h1>TEST</h1>
             </div>
             <div class="searchBox">
                 <div class="form">
-                    <h3 class="title">What's your bib number?</h3><input class=
-                    "bibInput" maxlength="4" type="text">
+                    <h3 class="title">What's your bib number?</h3><input class="bibInput" maxlength="4" type="text">
                     <div class="buttonContainer">
                         <button id="button"></button>
                     </div>
@@ -79,39 +78,41 @@
                 </div>
             </div>
             <div id="RR-360_results" race-id="gIiuN5" mobile="true"></div>
-            <script type="text/javascript" src="http://www.raceresults360.com/widget/w.js"/></script>
+            <script type="text/javascript" src="http://www.raceresults360.com/widget/w.js" /></script>
         </div>
-    </div><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//npmcdn.com/vue@1.0.26/dist/vue.min.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script type="text/javascript">
-    $(function() {
-      $("#button").click(function() {
-          $("#button").addClass("onclic", 250, validate());
-      });
+        $(function() {
+            $("#button").click(function() {
+                $("#button").addClass("onclic", 250, validate());
+            });
 
-      function validate() {
-          setTimeout(function() {
-              $("#button").removeClass("onclic");
-              $("#button").addClass("validate", 450, callback());
-          }, 2250);
-      }
+            function validate() {
+                setTimeout(function() {
+                    $("#button").removeClass("onclic");
+                    $("#button").addClass("validate", 450, callback());
+                }, 2250);
+            }
 
-      function callback() {
-          setTimeout(function() {
-              $("#button").removeClass("validate");
-              $(".searchBox").fadeOut();
-              $(".infoBox").fadeIn();
-          }, 1250);
-      }
-    });
+            function callback() {
+                setTimeout(function() {
+                    $("#button").removeClass("validate");
+                    $(".searchBox").fadeOut();
+                    $(".infoBox").fadeIn();
+                }, 1250);
+            }
+        });
     </script>
     <script>
-    $.getJSON("http://www.raceresults360.com/widget/json.php?race_id=gIiuN5&page=default_event_id&callback=?",function(json){
-      console.log(json);
-    });
+        $.getJSON("http://www.raceresults360.com/widget/json.php?race_id=gIiuN5&page=default_event_id&callback=?", function(json) {
+            console.log(json);
+        });
     </script>
 </body>
+
 </html>
